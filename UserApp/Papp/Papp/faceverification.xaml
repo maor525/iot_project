@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Papp.faceverification">
+    <ContentPage.Content>
+        <StackLayout Padding="10,10,10,0">
+            <Label Text="First Entry" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="36" FontAttributes="Bold"/>
+            <Label Text="Since this is your first time using the app we require you upload a clear selfie for security purposes" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="18"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btnSelectPic" Grid.Row="0" Grid.Column="0" Text="Select picture"
+                Clicked="Button_Clicked" BackgroundColor="MediumAquamarine"/>
+                <Button x:Name="btnTakePic" Grid.Row="0" Grid.Column="1" Text="Take picture"
+                Clicked="Button_Clicked_2" BackgroundColor="MediumAquamarine"/>
+            </Grid>
+
+            <Image x:Name="imageView" HeightRequest="300" WidthRequest="400"/>
+            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue"/>
+            <Button Text="Upload" Clicked="Button_Clicked_1" x:Name="btnUpload" BackgroundColor="MediumAquamarine"  IsEnabled="False"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

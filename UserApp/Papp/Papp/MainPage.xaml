@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Papp.MainPage">
+
+    <StackLayout BackgroundColor="OldLace">
+        <Frame BackgroundColor="MediumAquamarine" Padding="24" CornerRadius="0">
+            <Label Text="SmartGate" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+            
+        <Label x:Name="label" Text="Please Enter your ID" FontSize="Title" HorizontalOptions="Center" Padding="30,10,30,10" FontAttributes="Bold"/>
+        <Entry x:Name="id" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Placeholder="YOUR ID" FontSize="16" WidthRequest="170" />
+        <Entry x:Name="password" IsPassword="True" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Placeholder="PASSWORD" FontSize="16" WidthRequest="170" />
+
+        <Button Text="Submit" BackgroundColor="MediumAquamarine" VerticalOptions="Center" HorizontalOptions="Center" FontSize="13"
+                WidthRequest="75" HeightRequest="75" BorderRadius="50" Clicked="OnSubmit"></Button>
+        
+        
+    </StackLayout>
+
+</ContentPage>

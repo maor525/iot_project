@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fff8e00e-5f0f-4171-b6cb-594483225090/resourceGroups/schoolproject/providers/Microsoft.Web/sites/schoolprojectWebAppSec",
+    "appService.deploySubpath": "Pwebapp"
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Papp.Student">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="OldLace">
+            <Frame BackgroundColor="MediumAquamarine" Padding="24" CornerRadius="0">
+                <Label x:Name="welcome" Text="Hi "  HorizontalTextAlignment="Center" TextColor="White" FontSize="32"/>
+            </Frame>
+            <Label x:Name="permissionLabel" Text = "Click to Scan the QR Code" FontSize="Subtitle" HorizontalOptions="Center" Padding="30,10,30,10" FontAttributes="Bold"></Label>
+            
+            <Button Text="Scan"
+                x:Name="btnScan" BackgroundColor="MediumAquamarine" VerticalOptions="Center" HorizontalOptions="Center"
+                WidthRequest="75" HeightRequest="75" BorderRadius="50"  
+                Clicked="btnScan_Clicked"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+<div class="container">
+  <h4> One Time Gate Pass </h4>
+  <div [hidden]="submitted">
+    <form (ngSubmit)="msg=''; Allow(); sgateForm.reset()" #sgateForm="ngForm">
+
+      {{ '' // ID }}
+      <div class="form-group">
+        <label for="name">ID</label>
+        <input type="text" class="form-control" id="id"
+                required
+                [(ngModel)]="model" name="id"
+                #id="ngModel">
+      </div>
+      
+      <button type="submit" class="btn btn-success" [disabled]="!sgateForm.form.valid">Submit</button>
+  </form>
+</div>
+<div [hidden]="!submitted">
+    <div [hidden]="msg!=''">
+      <br/><br/>
+      <div class="loader"></div>
+    </div>
+    <div [hidden]="msg==''">
+      <div [hidden]="msg!='updated'">
+        <label>One pass permission has been created.</label>
+      </div>
+
+      <div [hidden]="msg=='updated'">
+        <label>Permission could not be created:</label>
+        {{msg}}
+        <br/>
+        <button class="again" (click)="msg=''; submitted=false; sgateForm.reset()">
+          One pass</button>
+      </div>
+    </div>
+</div>

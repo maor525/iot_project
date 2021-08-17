@@ -1,0 +1,47 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h4> Delete Student </h4>
+    <form (ngSubmit)="DeleteStudent()" #sgateForm="ngForm">
+      
+      {{ '' // ID }}
+      <div class="form-group">
+        <label for="name">ID</label>
+        <input type="text" class="form-control" id="id"
+                required
+                [(ngModel)]="model" name="id"
+                #id="ngModel">
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!sgateForm.form.valid">Submit</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h4>You submited the following student:</h4>
+    <div class="row">
+      <div class="col-xs-3">ID</div>
+      <div class="col-xs-9">{{ model }}</div>
+    </div>
+
+    <div [hidden]="msg!=''">
+      <br/><br/>
+      <div class="loader"></div>
+    </div>
+
+    <div [hidden]="msg==''">
+      
+      <div [hidden]="msg!='success'">
+        <label>The student has been deleted.</label>
+      </div>
+
+      <div [hidden]="msg=='success'">
+        <label>The student can not be deleted: </label>
+        {{msg}}
+      </div>
+
+      <br/>
+      <button class="again" (click)="msg=''; submitted=false; sgateForm.reset()">
+        Delete Student</button>
+    </div>  
+  </div>
+</div>

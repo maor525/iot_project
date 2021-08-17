@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CounterApp.GateMessage">
+    <ContentPage.Content>
+        <StackLayout x:Name="StackPage">
+            <Label Text=""></Label>
+            <Label Text="Please scan the QR Code below" TextColor="DarkGray" FontSize="Large"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label x:Name="granted" Text="Gate opening" FontSize="Large" TextColor="Green" VerticalOptions="Center" Opacity="0" HorizontalTextAlignment="Center"/>
+            <Label x:Name="denied" Text="Access Denied" FontSize="Large" TextColor="Red" VerticalOptions="Center" Opacity="0" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

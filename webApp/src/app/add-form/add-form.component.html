@@ -1,0 +1,139 @@
+<div class="container">
+  <div [hidden]="submitted" style="border: 10px;">
+    <h4> Add Student </h4>
+    <form (ngSubmit)="AddStudent()" #sgateForm="ngForm">
+      <table>
+      {{ '' // ID }}
+      <tr>
+        <td><label for="name">ID</label></td>
+        <td><input type="text" class="form-control" id="id" 
+              required
+              [(ngModel)]="model.id" name="id"
+              #id="ngModel"><div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+                ID is required
+              </div></td>
+        </tr>
+      {{ '' // Name }}
+      <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" class="form-control" id="name"
+              required
+              [(ngModel)]="model.name" name="name"
+              #name="ngModel">
+        </td>
+        </tr>
+
+      {{ '' // Class }}
+      <tr>
+        <td><label for="classid">Class</label></td>
+        <td><select class="form-control" id="classid"
+                required
+                [(ngModel)]="model.classid" name="classid"
+                #classid="ngModel">
+          <option *ngFor="let pow of grades" [value]="pow">{{pow}}</option>
+        </select></td>
+      </tr>
+
+      {{ '' // Password }}
+      <tr>
+        <td><label for="name">Password</label></td>
+        <td><input type="text" class="form-control" id="password"
+              required
+              [(ngModel)]="model.password" name="password"
+              #password="ngModel"></td>
+      </tr>
+
+      {{ '' // ParentID }}
+      <tr>
+        <td><label for="name">Parent ID</label></td>
+        <td><input type="text" class="form-control" id="parentid"
+              required
+              [(ngModel)]="model.parentid" name="parentid"
+              #parentid="ngModel"></td>
+
+      {{ '' // Parent Name }}
+
+        <td><label for="name">Parent Name</label>
+        <p>If parent is already in database, his name will change.</p></td>
+        <td><input type="text" class="form-control" id="parent_name"
+              required
+              [(ngModel)]="model.parent_name" name="parent_name"
+              #parent_name="ngModel"></td>
+
+      {{ '' // Parent Password }}
+
+        <td><label for="name">Parent Password</label>
+        <p>If parent is already in database, his password will change.</p></td>
+        <td><input type="text" class="form-control" id="parent_pw"
+              required
+              [(ngModel)]="model.parent_pw" name="parent_pw"
+              #parent_pw="ngModel"></td>
+      </tr>
+    </table>
+      <button type="submit" class="btn btn-success" [disabled]="!sgateForm.form.valid">Submit</button>
+
+    </form>
+  </div>
+
+
+
+  <div [hidden]="!submitted">
+    <h4>You submitted the following:</h4>
+    <div>
+      <div class="row">
+        <div class="col-xs-3">ID</div>
+        <div class="col-xs-9">{{ model.id }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">Name</div>
+        <div class="col-xs-9">{{ model.name }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">Class</div>
+        <div class="col-xs-9">{{ model.classid }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">Password</div>
+        <div class="col-xs-9">{{ model.password }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">Parent ID</div>
+        <div class="col-xs-9">{{ model.parentid }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">Parent Name</div>
+        <div class="col-xs-9">{{ model.parent_name }}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">Parent Password</div>
+        <div class="col-xs-9">{{ model.parent_pw }}</div>
+      </div>
+      
+
+      <div [hidden]="msg!=''">
+        <br/><br/>
+        <div class="loader"></div>
+      </div>
+      <div [hidden]="msg==''">
+        <div [hidden]="msg!='success'">
+          <label>The student has been added.</label>
+        </div>
+
+        <div [hidden]="msg=='success'">
+          <label>The student can not be added: </label>
+          {{msg}}
+        </div>
+
+        <br/>
+        <button class="again" (click)="NewStudent(sgateForm)">
+            New Student</button>
+      </div>
+    </div>
+  </div>
+</div>

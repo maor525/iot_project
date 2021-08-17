@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Papp.Parents">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout BackgroundColor="OldLace">
+            <Frame BackgroundColor="MediumAquamarine" Padding="24" CornerRadius="0">
+                <Label x:Name="welcome" Text="Hi "  HorizontalTextAlignment="Center" TextColor="White" FontSize="32"/>
+            </Frame>
+            <Label Text="Here is information about your kids' arrival: " FontSize="Subtitle" HorizontalOptions="Center" Padding="30,10,30,10" FontAttributes="Bold"></Label>
+            <Label x:Name="infoLabel" HorizontalOptions="Center"></Label>
+                <StackLayout Margin="10">
+                    <Label Text="Choose dates to view your child's attendance" FontSize="Subtitle" HorizontalOptions="Center" Padding="30,10,30,10" FontAttributes="Bold"></Label>
+                    <Picker x:Name="picker"
+                Title="Select child"
+                HorizontalTextAlignment="Center"
+                TitleColor="Red">
+                    </Picker>
+                    <Label Text="Start Date:" />
+
+                    <DatePicker x:Name="startDatePicker"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                    DateSelected="OnDateSelected" />
+
+                    <Label Text="End Date:" />
+
+                    <DatePicker x:Name="endDatePicker"
+                    MinimumDate="{Binding Source={x:Reference startDatePicker},
+                                          Path=Date}"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                    DateSelected="OnDateSelected" />
+
+                    <Label x:Name="resultLabel"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center" />
+                    <StackLayout Orientation="Horizontal"
+                     Margin="0, 0, 0, 30">
+                        <Button x:Name="button" Text="Get attendance" BackgroundColor="MediumAquamarine" HorizontalOptions="CenterAndExpand" Clicked="OnButtonClicked"
+        FontSize="Large">
+                    </Button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

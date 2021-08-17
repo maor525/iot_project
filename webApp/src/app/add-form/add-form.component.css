@@ -1,0 +1,58 @@
+
+input, select{
+    width: 200px;
+    text-align: center;
+
+}
+tr, td{  
+  border-collapse: collapse;
+  padding: 10px;
+}
+h1{
+  color: orange;
+}
+
+.btn-nav{
+  background-color:oldlace;
+  color: black;
+  border:2px solid rosybrown ;
+}
+.again, .btn-success{
+  background-color:white;
+  color: black;
+  border:2px solid orange;
+  border-radius: 40%;
+  padding: 10px;
+}
+.again:hover, .btn-success:hover{
+  background-color: orange;;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rosybrown;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

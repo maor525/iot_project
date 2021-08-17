@@ -1,0 +1,14 @@
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\bin\Debug\netstandard2.0\CounterApp.deps.json
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\bin\Debug\netstandard2.0\CounterApp.dll
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\bin\Debug\netstandard2.0\CounterApp.pdb
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\CounterApp.csprojAssemblyReference.cache
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\CounterApp.AssemblyInfoInputs.cache
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\CounterApp.AssemblyInfo.cs
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\CounterApp.csproj.CoreCompileInputs.cache
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\CounterApp.dll
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\CounterApp.pdb
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\GateMessage.xaml.g.cs
+C:\Users\Maor\Desktop\01 Mobile App\Advanced\CounterApp\CounterApp\obj\Debug\netstandard2.0\faceverification.xaml.g.cs

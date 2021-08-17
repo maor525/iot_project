@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="Smart Gate" HorizontalOptions="Center" FontSize="32" FontAttributes="Bold" Margin="20" TextColor="Gray"/>
+        <Label Text="Please enter your ID" FontSize="Medium" TextColor="DarkGray" VerticalOptions="Center" HorizontalTextAlignment="Center" />
+        <Entry x:Name="id" Placeholder="ID" MaxLength="9" ClearButtonVisibility="WhileEditing" Keyboard="Numeric" WidthRequest = "300" Text="" HorizontalTextAlignment="Center"/>
+        <Button x:Name="button" Text="Continue" BackgroundColor="MediumAquamarine" HorizontalOptions="CenterAndExpand" Clicked="OnButtonClicked"
+        FontSize="Large">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button"
+                     Binding="{Binding Source={x:Reference id},
+                                       Path=Text.Length}"
+                     Value = "0">
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
+        <Label x:Name="granted" Text="Gate opening" FontSize="Large" TextColor="Green" VerticalOptions="Center" Opacity="0" HorizontalTextAlignment="Center"/>
+        <StackLayout VerticalOptions="End">
+            <Label x:Name="invalid_id" Text="Invalid ID, Try again" FontSize="Medium" TextColor="Red" VerticalOptions="Center" Opacity="0" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </StackLayout>
+
+
+
+
+
+
+</ContentPage>

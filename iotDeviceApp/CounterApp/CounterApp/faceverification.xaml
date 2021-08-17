@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CounterApp.faceverification">
+    <ContentPage.Content>
+        <StackLayout Padding="10,10,10,0">
+            <Label Text="Face Identification" FontSize="32" FontAttributes="Bold" TextColor="Gray" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+            <Label Text="Please take a clear selfie so we can identify you" FontSize="20" TextColor="Gray" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btnTakePic" Grid.Row="0" Grid.Column="0" Text="Take a picture"
+                Clicked="Button_Clicked_2" BackgroundColor="MediumAquamarine" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+
+            <Image x:Name="imageView" HeightRequest="300" WidthRequest="400"/>
+            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue"/>
+            <Button Text="continue" Clicked="Button_Clicked_1" x:Name="btnUpload" BackgroundColor="MediumAquamarine" TextColor="White" IsEnabled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

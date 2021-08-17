@@ -1,0 +1,53 @@
+  <div [hidden]="!Permission">
+    <div style="text-align: center">
+        <h1> Smart Gate Management </h1>
+        <button class="btn btn-nav" (click)="nav='Add'">Add Student </button>
+        <button class="btn btn-nav" (click)="nav='Delete'">Delete Student </button>
+        <button class="btn btn-nav" (click)="nav='Modify'">Modify Student </button>
+        <button class="btn btn-nav" (click)="nav='Pass'">One Time Gate Pass </button>
+    </div>  
+
+  <br/>
+    <div *ngIf="nav=='Modify'">
+      <app-modify-form></app-modify-form>
+    </div>
+    <div *ngIf="nav=='Pass'">
+      <app-pass-form></app-pass-form>
+    </div>
+    <div *ngIf="nav=='Add'">
+      <app-add-form></app-add-form>
+    </div>
+    <div *ngIf="nav=='Delete'">
+      <app-delete-form></app-delete-form>
+    </div>
+
+    <button class="btn btn-nav" style="position: fixed; right: 50%; bottom: 5%;" (click)="Permission = false;">Logout</button>
+  </div>
+
+  {{ '' // Get Premissioon }}
+  <div class="parent" [hidden]="Permission">
+    
+    <h1>
+      Smart Gate Management
+    </h1>
+    <h4 style="text-align: center;">To manage the gate please login first</h4>
+    <br/> 
+    <form (ngSubmit)="CheckPermission(loginForm)" #loginForm="ngForm">
+        {{ '' // Check Permission }}
+        <div class="child" class="form-group">
+          <label [hidden]="wrong">Please enter password:</label>
+          <label [hidden]="!wrong">Wrong password. Please try again:</label>
+          <input type="password" class="form-control" id="password" 
+                required
+                [(ngModel)]="model" name="password"
+                #password="ngModel">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Submit</button>
+
+    </form>
+</div>
+  <!-- 
+  Copyright Google LLC. All Rights Reserved.
+  Use of this source code is governed by an MIT-style license that
+  can be found in the LICENSE file at https://angular.io/license
+  -->
